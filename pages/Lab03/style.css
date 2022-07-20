@@ -1,11 +1,29 @@
   body {
-    min-height: 100vh;
-    background: #212534;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
+    background: rgb(46, 46, 46);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 16px;
   }
   
+  #side-bar {
+    max-width: 200px;
+    width: 100px;
+    height: 100vh;
+  }
+  #main-cont {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    margin: 20px 20px;
+
+
+  }
+ 
+
+  #body-cont {
+    background: rgb(25, 25, 25); 
+    border-radius: 30px;
+    /* background-color: red; */
+    width: 100%;
+    /* /* height: 100vh; */
+  }
