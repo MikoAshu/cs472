@@ -1,11 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 body {
     background-color: rgb(68, 68, 68);
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,37 +19,110 @@ body {
 }
 
 #main-body {
-    background-color: antiquewhite;
+    background-color: rgb(83, 83, 83);
     height: 100vh;
     width: 100vw;
-}
-#footer-main{
-    height: 80px;
     display: grid;
-    grid-template-columns: 5fr 1fr ;
-}
-
-#footer-left {
-    display: flex;
-    align-items: baseline;
-    justify-content: left;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20px;
+    gap: 10px;
     background-color: antiquewhite;
 }
 
-#footer-right {
-    width: 100px;
+#body-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+#footer-main{
+    height: 80px;
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 5fr 1fr ;
+    grid-template-rows: 1fr;
+}
+
+#footer-left {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(83, 83, 83);
+    padding-top: 10px;
+}
+
+#footer-right {
+    height: 100px;
+    padding-top: 10px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
 .footer-label{
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 600;
     color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    
 }
 
 .logo-text{
     font-size: 18px;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    height: 20px;
+}
+
+#contact-section{
+    background-color: burlywood;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#contact-section label {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.b-title{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+#tweets li{
+	margin: 0;
+	padding: 20px 10px 0px 40px;
+	list-style: none;
+	background-image: url("./images/twitter.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+}
+
+#instagram-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    width:200px;
+}
+
+.instagram-container {
+    width: 100px;
+    height: 100px;
+}
+
+.instagram-container img {
+    width: 100%;
+    height: 100%;
 }
