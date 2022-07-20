@@ -26,8 +26,7 @@ body {
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: repeat(auto-fill, 400px); */
-    margin: 0px 100px;
+    margin: 0px 150px;
     padding: 0px 100px;
     gap: 20px;
 }
@@ -44,13 +43,12 @@ body {
     grid-row: 3 / 3;
     height: 100px;
     margin: 0 15%;
-    /* background-color: rgb(83, 83, 83); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-
+#hr {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+}
 
 #footer-main{
     height: 80px;
@@ -75,7 +73,7 @@ body {
     padding-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 .footer-label{
@@ -87,15 +85,11 @@ body {
 }
 
 .logo-text{
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
 }
 
-#hr {
-    height: 1px;
-    width: 100%;
-    background-color: white;
-}
+
 /* End Footer */
 /* Instagram Grid */
 #instagram-grid{
