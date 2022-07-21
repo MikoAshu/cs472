@@ -27,19 +27,19 @@
   #top-body{
     position: absolute;
     background-color: var(--color-primary);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fade-out 1s 10s forwards ease-in-out;
+    animation: fade-out 1s 10s forwards ease-in-out,
+                move-up 1s 11s forwards ease-in-out;
   }
-
 
   #intro-div, #div-curtain {
     background-color: var(--color-primary);
-    height: 100vh;
+    height: 100%;
     width: max-content;
     display: flex;
     flex-direction: column;
@@ -47,8 +47,6 @@
     align-items: center;
   }
   
-
-
  #intro-div h1 {
     border-right: .15em solid var(--color-hover);
     white-space: nowrap;
@@ -57,7 +55,7 @@
     font-family: monospace;
     overflow: hidden;
     animation: 
-      type 4s 2.5s steps(30, end),
+      type 4s 0.5s steps(30, end),
       blink-caret .5s step-end infinite;
   }
 
@@ -72,10 +70,10 @@
   }
 
   #intro-div{
-    animation: move-up 1s 10s forwards ease-in-out;
+
     position: absolute;
     height: 100vh;
-    
+    animation: move-up 1s 10s forwards ease-in-out;
   }
 
   #div-curtain {
@@ -90,8 +88,8 @@
   }
     
   @keyframes fade-out{
-    from { opacity: 1 }
-    to { opacity: 0 }
+    from { opacity: 1; display: visible}
+    to { opacity: 0; display: none}
   }
 
   body {
