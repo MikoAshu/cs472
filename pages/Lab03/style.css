@@ -59,7 +59,7 @@
   color: #fff;
   font-family: monospace;
   overflow: hidden;
-  animation: type 4s 0.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  animation: type 4s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes type {
