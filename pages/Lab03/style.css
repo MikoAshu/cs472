@@ -37,8 +37,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fade-out 1s 10s forwards ease-in-out,
-    move-up 1s 11s forwards ease-in-out;
+  animation: fade-out 1s 8s forwards ease-in-out,
+    move-up 1s 9s forwards ease-in-out;
 }
 
 #intro-div,
@@ -84,13 +84,13 @@
 #intro-div {
   position: absolute;
   height: 130%;
-  animation: move-up 1s 10s forwards ease-in-out;
+  animation: move-up 1s 8s forwards ease-in-out;
 }
 
 #div-curtain {
   background-color: var(--color-secondary);
   transform: translateY(-100vh);
-  animation: move-up 1s 10s reverse ease-in-out;
+  animation: move-up 1s 8s reverse ease-in-out;
 }
 
 @keyframes move-up {
@@ -354,7 +354,7 @@ body {
   font-weight: 700;
   width: max-content;
   opacity: 0;
-  animation: slide-in-left 0.5s 10s forwards ease-in-out;
+  animation: slide-in-left 0.5s 8s forwards ease-in-out;
 }
 
 .card:hover {
@@ -407,7 +407,7 @@ body {
   background-position: center;
   width: 93%;
   height: 400px;
-  animation: slide-in-right 0.5s 10s forwards ease-in-out;
+  animation: slide-in-right 0.5s 8s forwards ease-in-out;
 }
 
 #card3 img {
