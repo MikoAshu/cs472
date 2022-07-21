@@ -83,7 +83,7 @@
 
 #intro-div {
   position: absolute;
-  height: 100vh;
+  height: 130%;
   animation: move-up 1s 10s forwards ease-in-out;
 }
 
@@ -95,10 +95,10 @@
 
 @keyframes move-up {
   from {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
   to {
-    transform: translateY(-120%);
+    transform: translateY(-180%);
   }
 }
 
