@@ -15,10 +15,85 @@
                                     rgb(239, 147, 90), 
                                     rgb(194, 106, 231), 
                                     rgb(53, 69, 170));
+    --gradient-secondary: linear-gradient(to right, 
+    rgb(172, 172, 172), 
+    rgb(239, 147, 90), 
+    rgb(194, 106, 231), 
+    rgb(53, 69, 170));                               
     --height-line-card: 50px;
     --size-btn-font: 16px;
   }
+
+  #top-body{
+    position: absolute;
+    background-color: var(--color-primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fade-out 1s 10s forwards ease-in-out;
+  }
+
+
+  #intro-div, #div-curtain {
+    background-color: var(--color-primary);
+    height: 100vh;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   
+
+
+ #intro-div h1 {
+    border-right: .15em solid var(--color-hover);
+    white-space: nowrap;
+    letter-spacing: .15em;
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    animation: 
+      type 4s 2.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  @keyframes type {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-hover) }
+  }
+
+  #intro-div{
+    animation: move-up 1s 10s forwards ease-in-out;
+    position: absolute;
+    height: 100vh;
+    
+  }
+
+  #div-curtain {
+    background-color: var(--color-secondary);
+    transform: translateY(-100vh);
+    animation: move-up 1s 10s reverse ease-in-out;
+  }
+
+  @keyframes move-up {
+    from { transform: translateY(0) }
+    to { transform: translateY(-100vh) }
+  }
+    
+  @keyframes fade-out{
+    from { opacity: 1 }
+    to { opacity: 0 }
+  }
+
   body {
     background: rgb(27, 23, 23);
     padding: 0px;
