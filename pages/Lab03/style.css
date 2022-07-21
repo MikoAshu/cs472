@@ -37,6 +37,29 @@
     background: rgb(46, 46, 46);
     padding: 20px;
   }
+
+  #wave:hover {
+    animation-name: wave-animation; 
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) scale(1.5); }
+   10% { transform: rotate(14.0deg) scale(1.5);  }
+   20% { transform: rotate(-8.0deg) scale(1.5);  }
+   30% { transform: rotate(14.0deg) scale(1.5);  }
+   40% { transform: rotate(-4.0deg) scale(1.5);  }
+   50% { transform: rotate(10.0deg) scale(1.5); }
+   60% { transform: rotate( 0.0deg) scale(1.5); } 
+  100% { transform: rotate( 0.0deg) scale(1.5); }
+}
+  #header:hover {
+    cursor: pointer;
+    color: var(--color-hover);
+  }
 /* sidebar start */
   #side-bar {
     width: 100px;
