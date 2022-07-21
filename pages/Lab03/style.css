@@ -2,6 +2,7 @@
     --color-primary: rgb(25, 25, 25);
     --color-secondary: rgb(46, 46, 46); 
     --color-tertiary: rgb(31, 31, 31);
+    --color-hover: rgb(207, 82, 33);
     --color-accent: rgb(255, 255, 255);
     --border-color: rgb(87, 87, 87);
     --size-avat: 30px;
@@ -78,17 +79,18 @@
   .side-icons {
     cursor: pointer;
     margin-left: 10px;
-    width: 120px;
+    width: 140px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px 0px 0px 30px;
-    transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
   }
 
   .side-icons:hover {
     background-color: var(--color-primary);
+    transform: scale(1.1);
   }
   /* sidebar end */
 
@@ -132,11 +134,27 @@
     height: 40px;
     width: 100px;
     padding: 0px 10px;
-    text-decoration: none;
+    cursor: pointer;
     color: var(--color-primary-font);
     font-weight: 700;
     align-items: center;
+    animation:  button-anim  0.5s ease-in-out alternate;    
+  }
+
+  @keyframes button-anim {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
     
+  }
+  #register:hover {
+    background-position: right;
   }
 
   #body {
@@ -173,6 +191,11 @@
     color: var(--color-primary-font);
     font-weight: 700;
     width: max-content;
+  }
+
+  .card:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.01);
   }
 
   #right-body{
@@ -252,6 +275,18 @@
     color: var(--color-primary-font);
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .table label{
+    /* width: 20%; */
+    align-self: center;
+    justify-content: center;
+  }
+  .table:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.1);
   }
 
   .table label {
