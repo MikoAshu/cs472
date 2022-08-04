@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1070.0" data-gr-ext-installed="">
+
+    <div id="direction">
+        <label>Direction</label>
+        <select id="selectDirection">
+            <option>Vertical</option>
+            <option>Horizontal</option>
+        </select>
+    </div>
+    <br>
+    <div id="filterDiv">
+        <label>Filter</label>
+        <select id="selectFilter">
+            <option>All</option>
+            <option>Even</option>
+            <option>Odd</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <button onclick="move()">Print</button>
+    </div>
+    <script>
+        let planetsArray = ['Earth', 'Venus', 'Jupiter', 'Mars', 'Mercury', 'Saturn', 'Uranus'];
+        /*
+1. [2.5] User Selects Vertical direction and clicks on print, all the planets should print in vertical direction after every second
+
+2.[2.5]  User Selects Horizontal direction and clicks on print, all the planets should print in horizontal direction after every second
+
+3. [2] User Selects Filter
+
+a. 'All' -> All Planets should be printed
+
+b. 'Even' -> Only Planets at even indexes should be printed
+
+c. 'Odd'-> Only Planets at odd indexes should be printed
+
+4. [2] The printing should stop after all items are printed.
+
+5.[1] Everytime 'Print' is clicked . printing  should start new on new line without interrupting the earlier ones, i.e. 
+        */
+        function move() {
+            let direction = $('#selectDirection').val();
+            let filter = $('#selectFilter').val();
+            let planetsArrayFil = planetsArray.filter((o, i) => {
+                switch (filter) {
+                    case 'All':
+                        return true;
+                        break;
+                    case 'Even':
+                        return i % 2 === 0
+                        break;
+                    case 'Odd':
+                        return i % 2 !== 0
+                        break;
+                    default:
+                        break;
+                }
+            })
+            let container = $('<div> </div>').appendTo('body')
+            let lastTimer = 0;
+            switch (direction) {
+                case 'Vertical':
+                    planetsArrayFil.forEach(o => {
+                        setTimeout(createAppend(o, container, true), lastTimer += 1000)
+                    })
+                    break;
+                case 'Horizontal':
+                    planetsArrayFil.forEach(o => {
+                        setTimeout(createAppend(o, container), lastTimer += 1000)
+                    })
+                    break;
+                default:
+                    break;
+            }
+
+            function createAppend(val, container, addBreak) {
+                return function appendCh() {
+                    $(`<label> ${val}</label> ${addBreak? '<br/>': ''}`).appendTo($(container))
+                }
+            }
+
+        }
+
+
+    </script>
